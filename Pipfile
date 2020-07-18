@@ -10,7 +10,7 @@ gunicorn = "*"
 factory-boy = "*"
 titlecase = "*"
 bleach = "*"
-django = "==2.2.3"
+django = "==3.0.7"
 django-todo = "*"
 
 [dev-packages]
@@ -21,4 +21,4 @@ pytest-django = "*"
 mypy = "*"
 
 [requires]
-python_version = "3.6"
+python_version = "3.8"
