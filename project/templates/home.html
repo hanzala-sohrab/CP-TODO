@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}django-todo{% endblock %}
+
+{% block content %}
+
+  <h1>CP-TODO</h1>
+
+  <p>
+    CP-TODO is a todo app for competitive programmers built using Django.
+  </p>
+
+  <div class="card mt-4">
+      <div class="card-header">
+          <h5>
+            Demo user logins
+          </h5>
+      </div>
+      <div class="card-body">
+        <p>
+          You can log into this demo site as one of several users, who have different permissions and group memberships.
+        </p>
+        <ul>
+          <li>
+            To access all lists, and to be able to create new lists, login as user <code>hanzala</code>
+          </li>
+          <li>
+              <b>The password for all demo users is <code>abcd1234</code></b>
+          </li>
+        </ul>
+        <p>
+          {% if user.is_authenticated %}
+            You are already logged in.
+          {% else %}
+            <a href="{% url 'login' %}" class="btn btn-primary">Log In</a>
+          {% endif %}
+        </p>
+      </div>
+    </div>
+{% endblock %}
