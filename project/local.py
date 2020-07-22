@@ -3,7 +3,7 @@ import os
 from .settings import *  # noqa: F401
 
 
-DEBUG = False
+DEBUG = True
 
 # DATABASES = {
 #     'default': {

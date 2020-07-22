@@ -2,7 +2,7 @@ import os
 
 from django.contrib.messages import constants as message_constants
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -79,7 +79,8 @@ FILE_UPLOAD_PERMISSIONS = 0o644
 # Override in local.py :
 # ######################
 
-SECRET_KEY = os.environ['SECRET_KEY']
+# SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = 'lksdf98wrhkjs88dsf8-324ksdm'
 
 TEMPLATES = [
     {
@@ -110,14 +111,14 @@ MESSAGE_TAGS = {message_constants.ERROR: "danger"}
 # DATABASES = {}
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ['DB_NAME'],
-        'USER': os.environ['DB_USER'],
-        'PASSWORD': os.environ['DB_PASS'],
-        'HOST': os.environ['DB_HOST'],
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': os.environ['DB_NAME'],
+        # 'USER': os.environ['DB_USER'],
+        # 'PASSWORD': os.environ['DB_PASS'],
+        # 'HOST': os.environ['DB_HOST'],
+        # 'PORT': '5432',
     }
 }
 
