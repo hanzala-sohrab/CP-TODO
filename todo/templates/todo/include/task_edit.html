@@ -10,12 +10,21 @@
     </div>
 
     <div class="form-group">
-      <label for="id_note">Description</label>
-      <textarea class="form-control" id="id_note" name="note" rows="5"
-        aria-describedby="inputNoteHelp">{% if form.note.value %}{{ form.note.value }}{% endif %}</textarea>
-      <small id="inputNoteHelp" class="form-text text-muted">
-        Describe the task or bug. Provide steps to reproduce the issue.
-      </small>
+      <label for="id_gfg">GeeksforGeeks Problem Statement Link</label>
+      <input type="url" class="form-control" id="id_gfg" name="gfg"
+        value="{% if form.gfg.value %}{{ form.gfg.value }}{% endif %}">
+    </div>
+
+    <div class="form-group">
+      <label for="id_lc">LeetCode Problem Statement Link</label>
+      <input type="url" class="form-control" id="id_lc" name="lc"
+        value="{% if form.lc.value %}{{ form.lc.value }}{% endif %}">
+    </div>
+
+    <div class="form-group">
+      <label for="id_explanation">Tutorial</label>
+      <input type="url" class="form-control" id="id_explanation" name="explanation"
+        value="{% if form.explanation.value %}{{ form.explanation.value }}{% endif %}">
     </div>
 
     <div class="form-group">
@@ -40,6 +49,15 @@
           Email notifications will only be sent if task is assigned to someone other than yourself.
         </small>
       </div>
+    </div>
+
+    <div class="form-group">
+      <label for="id_note">Description</label>
+      <textarea class="form-control" id="id_note" name="note" rows="5"
+        aria-describedby="inputNoteHelp">{% if form.note.value %}{{ form.note.value }}{% endif %}</textarea>
+      <small id="inputNoteHelp" class="form-text text-muted">
+        Describe the task or bug. Provide steps to reproduce the issue.
+      </small>
     </div>
 
     <input type="hidden" name="priority"

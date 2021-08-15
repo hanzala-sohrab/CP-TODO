@@ -27,7 +27,10 @@
       <table class="table" id="tasktable">
         <tr class="nodrop">
           <th>Task</th>
-          <th>Created</th>
+          <th>GfG</th>
+          <th>LeetCode</th>
+          <th>Tutorial</th>
+{#          <th>Created</th>#}
           <th>Due on</th>
           <th>Owner</th>
           <th>Assigned</th>
@@ -40,8 +43,17 @@
                 <a href="{% url 'todo:task_detail' task.id %}">{{ task.title|truncatewords:10 }}</a>
             </td>
             <td>
-                {{ task.created_date|date:"m/d/Y" }}
+                <a href="{% url 'todo:task_detail' task.id %}">{{ task.gfg|truncatewords:10 }}</a>
             </td>
+            <td>
+                <a href="{% url 'todo:task_detail' task.id %}">{{ task.lc|truncatewords:10 }}</a>
+            </td>
+            <td>
+                <a href="{% url 'todo:task_detail' task.id %}">{{ task.explanation|truncatewords:10 }}</a>
+            </td>
+{#            <td>#}
+{#                {{ task.created_date|date:"m/d/Y" }}#}
+{#            </td>#}
             <td>
               <span {% if task.overdue_status %}class="overdue"{% endif %}>
                 {{ task.due_date|date:"m/d/Y" }}

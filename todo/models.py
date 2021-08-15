@@ -71,6 +71,9 @@ class TaskList(models.Model):
 class Task(models.Model):
     title = models.CharField(max_length=140)
     task_list = models.ForeignKey(TaskList, on_delete=models.CASCADE, null=True)
+    gfg = models.URLField(verbose_name="GeeksforGeeks Link")
+    lc = models.URLField(verbose_name="LeetCode Link")
+    explanation = models.URLField()
     created_date = models.DateField(default=timezone.now, blank=True, null=True)
     due_date = models.DateField(blank=True, null=True)
     completed = models.BooleanField(default=False)
